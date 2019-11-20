@@ -1,8 +1,10 @@
-require('dotenv').config();
+// require('dotenv').config();
 
-let BASE_URL = '';
-if (process.env.NODE_ENV === 'production') BASE_URL = process.env.HOST; 
-else BASE_URL = 'http://localhost:3001';
+// let BASE_URL = '';
+// if (process.env.NODE_ENV === 'production') BASE_URL = process.env.HOST; 
+// else BASE_URL = 'http://localhost:3001';
+
+const BASE_URL = 'https://cookedchickpeas.herokuapp.com';
 
 const fetchRequest = (path, options) => {
   console.log(BASE_URL);
