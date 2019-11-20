@@ -1,4 +1,6 @@
-const BASE_URL = 'http://192.168.1.130:3001';
+let BASE_URL = '';
+if (process.env.NODE_ENV === 'production') BASE_URL = process.env.HOST 
+else BASE_URL = 'http://localhost:3001';
 
 const fetchRequest = (path, options) => {
   return fetch(BASE_URL + path, options)
