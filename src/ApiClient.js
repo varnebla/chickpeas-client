@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 
 // let BASE_URL = '';
 // if (process.env.NODE_ENV === 'production') BASE_URL = process.env.HOST; 
@@ -7,7 +7,7 @@
 const BASE_URL = 'https://cookedchickpeas.herokuapp.com';
 
 const fetchRequest = (path, options) => {
-  console.log(BASE_URL);
+  console.log(process.env.NODE_ENV);
   return fetch(BASE_URL + path, options)
     .then(response => response.json())
     .catch(reject => console.error(reject)); //eslint-disable-line no-console
