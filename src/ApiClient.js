@@ -1,8 +1,9 @@
 let BASE_URL = '';
-if (process.env.NODE_ENV === 'production') BASE_URL = process.env.HOST 
+if (process.env.NODE_ENV === 'production') BASE_URL = process.env.HOST; 
 else BASE_URL = 'http://localhost:3001';
 
 const fetchRequest = (path, options) => {
+  console.log(BASE_URL);
   return fetch(BASE_URL + path, options)
     .then(response => response.json())
     .catch(reject => console.error(reject)); //eslint-disable-line no-console
